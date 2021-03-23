@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="home"
+        android:id="@+id/home"
+        />
+
+    <item
+        android:id="@+id/About"
+        android:title="About"
+        />
+
+    <item
+        android:id="@+id/rating"
+        android:title="rating"
+        />
+
+    <item
+        android:id="@+id/questions"
+        android:title="Questions" />
+</menu>
