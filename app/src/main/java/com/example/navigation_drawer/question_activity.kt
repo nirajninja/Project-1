@@ -1,9 +1,8 @@
 package com.example.navigation_drawer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.navigation_drawer.inside_fragment.fragment1
 import com.example.navigation_drawer.inside_fragment.fragment2
@@ -17,6 +16,10 @@ class question_activity : AppCompatActivity() {
 
         val data=intent.getIntExtra("ExtraData",0)
 
+        val intent= Intent(this,fragment1::class.java)
+        intent.putExtra("daa",data)
+
+
    /* if(data==1)
     {
         Toast.makeText(this,"hello bitches",Toast.LENGTH_SHORT).show()
@@ -29,14 +32,16 @@ class question_activity : AppCompatActivity() {
         val firstfragment= fragment1()
         val secondFragment= fragment2()
         val thirdFragment= fragment3()
+        firstfragment.list2= ArrayEasy
+        secondFragment.mediumList= ArrayMedium
 
         setcurrentfragment(firstfragment)
 
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.miHome->setcurrentfragment(firstfragment)
-                R.id.miProfile->setcurrentfragment(secondFragment)
-                R.id.mi_message->setcurrentfragment(thirdFragment)
+                R.id.miEasy->setcurrentfragment(firstfragment)
+                R.id.miMedium->setcurrentfragment(secondFragment)
+                R.id.mi_Hard->setcurrentfragment(thirdFragment)
             }
             true
         }

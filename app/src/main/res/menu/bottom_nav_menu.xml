@@ -3,20 +3,20 @@
 
 
     <item
-        android:id="@+id/miHome"
+        android:id="@+id/miEasy"
         android:icon="@drawable/easy"
         android:title="Easy"
         />
 
     <item
-        android:id="@+id/mi_message"
+        android:id="@+id/miMedium"
         android:icon="@drawable/medium"
         android:title="Medium"
         />
 
 
     <item
-        android:id="@+id/miProfile"
+        android:id="@+id/mi_Hard"
         android:icon="@drawable/hard"
         android:title="Hard"
         />
