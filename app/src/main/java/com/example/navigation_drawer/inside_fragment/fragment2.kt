@@ -15,10 +15,10 @@ import com.example.navigation_drawer.R
 import kotlinx.android.synthetic.main.fragment_fragment1.*
 import kotlinx.android.synthetic.main.fragment_fragment2.*
 
-class fragment2 : Fragment() ,DataTypeAdapter.ontodoItemClickListener{
+class fragment2 : Fragment(), DataTypeAdapter.ontodoItemClickListener {
     // TODO: Rename and change types of parameters
 
-    public lateinit var  mediumList:List<DataType>
+    public lateinit var mediumList: List<DataType>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,15 +31,11 @@ class fragment2 : Fragment() ,DataTypeAdapter.ontodoItemClickListener{
         super.onViewCreated(itemView, savedInstanceState)
 
 
+        //       var list= ArrayMedium
+        val adapter = DataTypeAdapter(mediumList, this)
 
-
-
-
- //       var list= ArrayMedium
-        val adapter= DataTypeAdapter(mediumList,this)
-
-        rv2.adapter=adapter
-        rv2.layoutManager= LinearLayoutManager(context)
+        rv2.adapter = adapter
+        rv2.layoutManager = LinearLayoutManager(context)
 
     }
 

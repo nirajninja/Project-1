@@ -15,11 +15,8 @@ import com.example.navigation_drawer.webview.browser
 import kotlinx.android.synthetic.main.fragment_fragment1.*
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
-class fragment1 : Fragment(),DataTypeAdapter.ontodoItemClickListener {
-    public lateinit var  list2:List<DataType>
+class fragment1 : Fragment(), DataTypeAdapter.ontodoItemClickListener {
+    public lateinit var list2: List<DataType>
 
     override fun onCreateView(
 
@@ -33,72 +30,23 @@ class fragment1 : Fragment(),DataTypeAdapter.ontodoItemClickListener {
     }
 
 
-
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-
-
-
-
-
-
-
-        val adapter= DataTypeAdapter(list2,this)
-
-        rv.adapter=adapter
-        rv.layoutManager= LinearLayoutManager(context)
-
+        val adapter = DataTypeAdapter(list2, this)
+        rv.adapter = adapter
+        rv.layoutManager = LinearLayoutManager(context)
     }
 
     override fun onItemClick(item: DataType, position: Int) {
         val url = item.link
-
-
-        val intent=Intent(this.context,
-            browser::class.java)
-        intent.putExtra("extra",url)
-
+        val intent = Intent(
+            this.context,
+            browser::class.java
+        )
+        intent.putExtra("extra", url)
         startActivity(intent)
     }
 
-    /*override fun onItemClick(item: DataType, position: Int) {
-        val url = item.link
-
-        val intent=Intent(this.context,WebView::class.java)
-        intent.putExtra("extra",url)
-        startActivity(intent)
-    }*/
-/*
-
-    override fun onItemClick(item: DataType, position: Int) {
-   */
-/*     val url = item.link
-
-        wb_webView.webViewClient= WebViewClient()
-        wb_webView.apply {
-            loadUrl(url)
-            settings.javaScriptEnabled=true
-
-        }
-   *//*
-*/
-/*
-        val intent= Intent(this, webview::class.java)
-        startActivity(intent)*//*
-
-
-
-        */
-/* val url = item.link
-        val i = Intent(Intent.ACTION_VIEW)
-        i.data = Uri.parse(url)
-        startActivity(i)*//*
-
-
-
-    }
-
-*/
 
 
 }

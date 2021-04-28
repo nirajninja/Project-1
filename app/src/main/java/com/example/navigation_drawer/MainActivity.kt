@@ -59,6 +59,14 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
         }
 
+        if(item.itemId==R.id.quiz)
+        {
+
+            val intent=Intent(this,QuizActivity::class.java)
+            startActivity(intent)
+
+        }
+
 
 
         return true

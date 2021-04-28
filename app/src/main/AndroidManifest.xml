@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".webview.browser"></activity>
-        <activity android:name=".question_activity" />
+        <activity android:name=".Quiz.QuizQuestionActivity"></activity>
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".webview.browser" />
+        <activity android:name=".Quiz.question_activity" />
         <activity
             android:name=".MainActivity2"
             android:label="@string/title_activity_main2"
