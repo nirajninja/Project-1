@@ -1,13 +1,9 @@
-package com.example.navigation_drawer.Quiz
+package com.example.navigation_drawer
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.navigation_drawer.ArrayEasy
-import com.example.navigation_drawer.ArrayHard
-import com.example.navigation_drawer.ArrayMedium
-import com.example.navigation_drawer.R
 import com.example.navigation_drawer.inside_fragment.fragment1
 import com.example.navigation_drawer.inside_fragment.fragment2
 import com.example.navigation_drawer.inside_fragment.fragment3
@@ -22,23 +18,40 @@ class question_activity : AppCompatActivity() {
 
         val intent= Intent(this,fragment1::class.java)
         intent.putExtra("daa",data)
+        val firstfragment= fragment1()
+        val secondFragment= fragment2()
+        val thirdFragment= fragment3()
 
 
-   /* if(data==1)
+        if(data==1)
     {
-        Toast.makeText(this,"hello bitches",Toast.LENGTH_SHORT).show()
-    }*/
-//        Log.d("TAG"," the string is $String")
+
+        firstfragment.list2= ArrayEasy
+        secondFragment.mediumList= ArrayMedium
+        thirdFragment.HardList= ArrayHard
+
+    }
+        else if(data==2)
+        {
+            firstfragment.list2= sortingEasy
+            secondFragment.mediumList= sortingMedium
+            thirdFragment.HardList= sortingHard
+
+        }
+        else if(data==3)
+        {
+            firstfragment.list2= stacksEasy
+            secondFragment.mediumList= stackMedium
+            thirdFragment.HardList= stackHard
+
+        }
+//       Log.d("TAG"," the string is $String")
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question_activity)
 
-        val firstfragment= fragment1()
-        val secondFragment= fragment2()
-        val thirdFragment= fragment3()
-        firstfragment.list2= ArrayEasy
-        secondFragment.mediumList= ArrayMedium
-        thirdFragment.HardList= ArrayHard
+
+
 
         setcurrentfragment(firstfragment)
 

@@ -4,17 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#3FDACA"
     android:layout_height="120dp"
     >
 
+
+
     <androidx.cardview.widget.CardView
+        
+        android:background="@drawable/strings"
+        app:cardElevation="100dp"
+        android:outlineSpotShadowColor="@color/black"
         android:id="@+id/cw"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:orientation="vertical"
-        app:cardBackgroundColor="#B8F8BB"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +34,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+           <!-- <ImageView
+                android:id="@+id/dashboard_image"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dashboard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />-->
             <TextView
+
+                android:shadowRadius="1.6"
+
                 android:layout_marginRight="5dp"
 
                 android:textSize="15dp"
@@ -41,7 +60,7 @@
                 android:fontFamily="@font/roboto_bold"
 
                 android:textAlignment="textStart"
-                android:textColor="@color/black"
+                android:textColor="#115C9E"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
