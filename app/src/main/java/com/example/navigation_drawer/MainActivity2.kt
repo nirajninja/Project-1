@@ -43,6 +43,29 @@ class MainActivity2 : AppCompatActivity(){
             startActivity(intent)
 
         }
+        btn4.setOnClickListener {
+
+            val data:Int=4
+
+            val intent= Intent(this,
+                question_activity::class.java)
+            intent.putExtra("ExtraData",data)
+            startActivity(intent)
+
+        }
+        btn5.setOnClickListener {
+
+            val data:Int=5
+
+            val intent= Intent(this,
+                question_activity::class.java)
+            intent.putExtra("ExtraData",data)
+            startActivity(intent)
+
+        }
+
+
+
 
 
     }

@@ -45,6 +45,22 @@ class question_activity : AppCompatActivity() {
             thirdFragment.HardList= stackHard
 
         }
+        else if(data==4)
+        {
+            firstfragment.list2= treesEasy
+            secondFragment.mediumList= treesMedium
+            thirdFragment.HardList= treesHard
+
+
+        }
+        else if(data==5)
+        {
+            firstfragment.list2= backtrackingEasy
+            secondFragment.mediumList= backtrackingMedium
+            thirdFragment.HardList= backtrackingHard
+
+
+        }
 //       Log.d("TAG"," the string is $String")
 
         super.onCreate(savedInstanceState)
